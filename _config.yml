@@ -1,0 +1,136 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: RAN Intelligent Control and Automation
+subtitle: RIC/RIA
+description: Apply AI/ML in 5G RAN Control and Management
+keywords: 5G,NR,O-RAN,TIP,xApp,RIC,RIA,AI,ML,RRM
+author: Changlan (Alan) TSAI
+language: zh-tw
+timezone:
+
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  About: /about.html
+  Tags: /tags
+  Course: /Course
+  Categories: /categories
+  
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://tsaichanglan.github.io/
+root: /
+#permalink: :year/:month/:day/:title/
+permalink: :title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: false
+future: true
+
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace:
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index2_include_index: true # defult is true
+
+# 配置index2 generator
+index2_generator:
+  per_page: 10
+  order_by: -date
+  include:
+    - category Web 
+  exclude:
+    - tag Hexo 
+  
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: next
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: https://github.com/tsaichanglan/tsaichanglan.github.io.git
+  branch: master
+
+# Footer About Text
+footer_about: "Make Websites. Make Magic."
+
+# Social Accounts
+instagram_url: https://www.instagram.com/alan_tsai_cl/
+github_url: https://github.com/tsaichanglan
+email_url: changlan.tsai@gmail.com
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+# Local search
+local_search:
+  enable: true
+
+all_minifier: true
+
+fancybox: true
+
+#設置閱讀記數功能.
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+
+addlink:
+  before_text: __此文作者__：Changlan (Alan) Tsai <br />__此文地址__：  
+  after_text: <br />__版權聲明__：本博客所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/tw/">CC BY-NC-SA 3.0 TW</a> 許可協議。轉載請註明出處！
+
+sitemap: 
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
